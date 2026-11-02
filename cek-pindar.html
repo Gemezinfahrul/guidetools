@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Cek Pinjol Legal - Cara Aktifkan Dana Pinjam</title>
+<meta name="description" content="Cari nama aplikasi, perusahaan, atau situs di daftar 94 penyelenggara pindar berizin OJK.">
+<script>(function () {
+  var akar = document.documentElement;
+  var cari = location.search;
+  var tema = /[?&]tema=(gelap|terang)(&|$)/.exec(cari);
+  akar.classList.add('next-js', 'next-mode-polos');
+  if (tema) {
+    akar.setAttribute('data-theme', tema[1] === 'gelap' ? 'dark' : 'light');
+  }
+  var aset = location.protocol === 'file:' ||
+    location.hostname === 'appassets.androidplatform.net';
+  if (aset || /[?&](aplikasi|polos)=1(&|$)/.test(cari)) {
+    akar.classList.add('alat--aplikasi');
+  }
+})();</script>
+<style>
+@layer next-token, next-dasar, next-tata, next-komponen, next-isi, next-util;
+
+@layer next-token {
+  :root {
+    color-scheme: light;
+    --next-warna-utama: #d21f2b;
+    --next-warna-utama-hover: #b01a24;
+    --next-warna-utama-teks: #c01b26;
+    --next-warna-utama-lembut: #fdecee;
+    --next-pada-utama: #ffffff;
+    --next-latar: #ffffff;
+    --next-permukaan: #f1f3f6;
+    --next-permukaan-2: #e6e9ee;
+    --next-teks: #141821;
+    --next-teks-redup: #5b6170;
+    --next-garis: #e3e6eb;
+    --next-tautan: #0b5d91;
+    --next-info: #0b5d91;
+    --next-info-lembut: #e7f1f9;
+    --next-sukses: #16794a;
+    --next-sukses-lembut: #e7f5ee;
+    --next-peringatan: #9a5b00;
+    --next-peringatan-lembut: #fdf3e2;
+    --next-kerangka: #e7eaef;
+    --next-kaki-latar: #141821;
+    --next-lapis-dasar: var(--next-permukaan);
+    --next-lapis-kartu: var(--next-latar);
+    --next-tirai: linear-gradient(180deg, rgb(0 0 0 / 0) 30%,
+      rgb(0 0 0 / .55) 60%, rgb(0 0 0 / .88) 100%);
+
+    --next-font-judul: "Plus Jakarta Sans", system-ui, -apple-system,
+      "Segoe UI", Roboto, sans-serif;
+    --next-font-isi: var(--next-font-judul);
+    --next-font-kode: ui-monospace, "SFMono-Regular", Consolas,
+      "Liberation Mono", monospace;
+
+    --next-ukuran-xs: .75rem;
+    --next-ukuran-sm: .875rem;
+    --next-ukuran-md: 1rem;
+    --next-ukuran-lg: 1.125rem;
+    --next-ukuran-xl: 1.3125rem;
+    --next-ukuran-2xl: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);
+    --next-ukuran-3xl: clamp(1.625rem, 1.15rem + 2vw, 2.5rem);
+    --next-tinggi-judul: 1.25;
+    --next-radius-sorot: 6px;
+    --next-mulus: cubic-bezier(.2, .8, .2, 1);
+    --next-tinggi-isi: 1.7;
+
+    --next-jarak-1: .25rem;
+    --next-jarak-2: .5rem;
+    --next-jarak-3: .75rem;
+    --next-jarak-4: 1rem;
+    --next-jarak-5: 1.5rem;
+    --next-jarak-6: 2rem;
+    --next-jarak-7: 2.5rem;
+    --next-jarak-8: 3rem;
+
+    --next-radius: 4px;
+    --next-radius-besar: 6px;
+    --next-lebar: 1200px;
+    --next-lebar-baca: 720px;
+    --next-tepi: 16px;
+    --next-bayangan: 0 1px 2px rgb(0 0 0 / .06),
+      0 6px 20px rgb(0 0 0 / .08);
+    --next-durasi: .18s;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --next-warna-utama: #e0313c;
+      --next-warna-utama-hover: #f04b55;
+      --next-warna-utama-teks: #ff7b83;
+      --next-warna-utama-lembut: #3a1519;
+      --next-latar: #0e1117;
+      --next-permukaan: #171b23;
+      --next-permukaan-2: #222733;
+      --next-teks: #e9ebf0;
+      --next-teks-redup: #9aa1b0;
+      --next-garis: #2a2f3a;
+      --next-tautan: #6fb6ec;
+      --next-info: #6fb6ec;
+      --next-info-lembut: #13263a;
+      --next-sukses: #5fd39b;
+      --next-sukses-lembut: #10291d;
+      --next-peringatan: #f3b75b;
+      --next-peringatan-lembut: #2e2210;
+      --next-kerangka: #222733;
+      --next-kaki-latar: #08090c;
+      --next-lapis-dasar: var(--next-latar);
+      --next-lapis-kartu: var(--next-permukaan);
+      --next-bayangan: 0 1px 2px rgb(0 0 0 / .4),
+        0 6px 20px rgb(0 0 0 / .4);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --next-warna-utama: #e0313c;
+    --next-warna-utama-hover: #f04b55;
+    --next-warna-utama-teks: #ff7b83;
+    --next-warna-utama-lembut: #3a1519;
+    --next-latar: #0e1117;
+    --next-permukaan: #171b23;
+    --next-permukaan-2: #222733;
+    --next-teks: #e9ebf0;
+    --next-teks-redup: #9aa1b0;
+    --next-garis: #2a2f3a;
+    --next-tautan: #6fb6ec;
+    --next-info: #6fb6ec;
+    --next-info-lembut: #13263a;
+    --next-sukses: #5fd39b;
+    --next-sukses-lembut: #10291d;
+    --next-peringatan: #f3b75b;
+    --next-peringatan-lembut: #2e2210;
+    --next-kerangka: #222733;
+    --next-kaki-latar: #08090c;
+    --next-lapis-dasar: var(--next-latar);
+    --next-lapis-kartu: var(--next-permukaan);
+    --next-bayangan: 0 1px 2px rgb(0 0 0 / .4),
+      0 6px 20px rgb(0 0 0 / .4);
+  }
+}
+
+@layer next-dasar {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 64px;
+  }
+
+  body {
+    margin: 0;
+    background: var(--next-latar);
+    color: var(--next-teks);
+    font: var(--next-ukuran-md) / 1.55 var(--next-font-isi);
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, p, figure, ul, ol { margin: 0; }
+  ul[role="list"], ol[role="list"] { padding: 0; list-style: none; }
+
+  img, svg, video, iframe { max-width: 100%; display: block; }
+  img { height: auto; }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--next-warna-utama-teks); }
+
+  button, input, select, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+
+  :focus-visible {
+    outline: 2px solid var(--next-warna-utama-teks);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer next-util {
+  .next-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .next-lompat {
+    position: absolute;
+    left: var(--next-tepi);
+    top: -100px;
+    z-index: 100;
+    padding: var(--next-jarak-2) var(--next-jarak-4);
+    background: var(--next-warna-utama);
+    color: var(--next-pada-utama);
+    border-radius: var(--next-radius);
+  }
+  .next-lompat:focus {
+    top: var(--next-jarak-2);
+    color: var(--next-pada-utama);
+  }
+
+  .next-sembunyi { display: none !important; }
+}
+
+@layer next-komponen {
+  .next-tombol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--next-jarak-2);
+    min-height: 40px;
+    padding: var(--next-jarak-2) var(--next-jarak-4);
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius);
+    background: var(--next-latar);
+    color: var(--next-teks);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background var(--next-durasi), border-color var(--next-durasi);
+  }
+  .next-tombol:hover {
+    border-color: var(--next-teks);
+    color: var(--next-teks);
+  }
+  .next-tombol--utama {
+    border-color: var(--next-warna-utama);
+    background: var(--next-warna-utama);
+    color: var(--next-pada-utama);
+  }
+  .next-tombol--utama:hover {
+    border-color: var(--next-warna-utama-hover);
+    background: var(--next-warna-utama-hover);
+    color: var(--next-pada-utama);
+  }
+  .next-tombol svg { width: 18px; height: 18px; }
+
+  .next-toast {
+    position: fixed;
+    left: 50%;
+    bottom: var(--next-jarak-6);
+    z-index: 60;
+    padding: var(--next-jarak-3) var(--next-jarak-4);
+    border-radius: var(--next-radius);
+    background: var(--next-teks);
+    color: var(--next-latar);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 600;
+    box-shadow: var(--next-bayangan);
+    transform: translate(-50%, 16px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .25s var(--next-mulus), opacity .25s;
+  }
+  .next-toast--tampil { transform: translate(-50%, 0); opacity: 1; }
+}
+
+@layer next-isi {
+  .next-isi {
+    min-width: 0;
+    max-width: var(--next-lebar-baca);
+    font-size: 1.0625rem;
+    line-height: var(--next-tinggi-isi);
+  }
+  .next-isi > * + * { margin-top: 1.15em; }
+
+  .next-isi h1 {
+    font: 800 var(--next-ukuran-3xl) / 1.15 var(--next-font-judul);
+    letter-spacing: -.03em;
+    text-wrap: balance;
+  }
+
+  .next-isi h2, .next-isi h3, .next-isi h4 {
+    margin-top: 1.8em;
+    font-family: var(--next-font-judul);
+    font-weight: 800;
+    line-height: var(--next-tinggi-judul);
+    letter-spacing: -.02em;
+  }
+  .next-isi h2 { font-size: var(--next-ukuran-2xl); }
+  .next-isi h3 { font-size: var(--next-ukuran-xl); }
+  .next-isi h4 { font-size: var(--next-ukuran-lg); }
+
+  .next-isi a:not(.next-tombol) {
+    color: var(--next-tautan);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .next-isi a:not(.next-tombol):hover { text-decoration-thickness: 2px; }
+
+  .next-isi ul, .next-isi ol { padding-left: 1.4em; }
+  .next-isi li + li { margin-top: .4em; }
+
+  .next-isi blockquote {
+    margin-inline: 0;
+    padding: var(--next-jarak-2) 0 var(--next-jarak-2) var(--next-jarak-5);
+    border-left: 4px solid var(--next-warna-utama);
+    font-size: var(--next-ukuran-xl);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -.01em;
+  }
+
+  .next-isi img { border-radius: var(--next-radius-besar); }
+  .next-isi figcaption {
+    margin-top: var(--next-jarak-2);
+    font-size: var(--next-ukuran-xs);
+    color: var(--next-teks-redup);
+  }
+
+  .next-isi hr {
+    border: 0;
+    border-top: 1px solid var(--next-garis);
+    margin-block: 2em;
+  }
+
+  .next-isi code {
+    padding: .1em .35em;
+    border-radius: 4px;
+    background: var(--next-permukaan-2);
+    font: .88em var(--next-font-kode);
+  }
+  .next-isi pre {
+    overflow-x: auto;
+    padding: var(--next-jarak-4);
+    border-radius: var(--next-radius);
+    background: var(--next-permukaan);
+    font-size: var(--next-ukuran-sm);
+    line-height: 1.6;
+  }
+  .next-isi pre code { padding: 0; background: none; }
+
+  .next-isi table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--next-ukuran-sm);
+  }
+  .next-isi th, .next-isi td {
+    padding: var(--next-jarak-2) var(--next-jarak-3);
+    border: 1px solid var(--next-garis);
+    text-align: left;
+    vertical-align: top;
+  }
+  .next-isi th { background: var(--next-permukaan); }
+  .next-tabel { overflow-x: auto; }
+
+  .next-isi .next-baca-juga {
+    margin-block: 1.6em;
+    padding: var(--next-jarak-3) 0;
+    border-block: 1px solid var(--next-garis);
+    font-size: var(--next-ukuran-md);
+    font-weight: 700;
+    line-height: 1.45;
+  }
+  .next-baca-juga span {
+    margin-right: var(--next-jarak-2);
+    color: var(--next-warna-utama-teks);
+  }
+  .next-isi .next-baca-juga a {
+    color: var(--next-teks);
+    text-decoration: none;
+  }
+  .next-isi .next-baca-juga a:hover { text-decoration: underline; }
+
+  .next-catatan {
+    padding: var(--next-jarak-4) var(--next-jarak-5);
+    border-left: 4px solid var(--next-info);
+    border-radius: var(--next-radius);
+    background: var(--next-info-lembut);
+    font-size: var(--next-ukuran-md);
+  }
+  .next-catatan > * + * { margin-top: .6em; }
+  .next-catatan--sukses {
+    border-color: var(--next-sukses);
+    background: var(--next-sukses-lembut);
+  }
+  .next-catatan--peringatan {
+    border-color: var(--next-peringatan);
+    background: var(--next-peringatan-lembut);
+  }
+
+  .next-putusan {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--next-jarak-3);
+    padding: var(--next-jarak-3) var(--next-jarak-4);
+    border-left: 4px solid var(--next-info);
+    border-radius: var(--next-radius);
+    background: var(--next-info-lembut);
+    font-size: var(--next-ukuran-sm);
+    line-height: 1.6;
+  }
+  .next-putusan > svg {
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    color: var(--next-info);
+  }
+  .next-putusan > div > * + * { margin-top: .5em; }
+  .next-putusan strong { font-size: var(--next-ukuran-md); }
+  .next-isi .next-putusan ul { padding-left: 1.2em; }
+  .next-isi .next-putusan li + li { margin-top: .25em; }
+  .next-putusan--ada, .next-putusan--baik {
+    border-color: var(--next-sukses);
+    background: var(--next-sukses-lembut);
+  }
+  .next-putusan--ada > svg, .next-putusan--baik > svg {
+    color: var(--next-sukses);
+  }
+  .next-putusan--mirip, .next-putusan--waspada {
+    border-color: var(--next-peringatan);
+    background: var(--next-peringatan-lembut);
+  }
+  .next-putusan--mirip > svg, .next-putusan--waspada > svg {
+    color: var(--next-peringatan);
+  }
+  .next-putusan--kosong, .next-putusan--bahaya {
+    border-color: var(--next-warna-utama);
+    background: var(--next-warna-utama-lembut);
+  }
+  .next-putusan--kosong > svg, .next-putusan--bahaya > svg {
+    color: var(--next-warna-utama-teks);
+  }
+
+  .next-isi .next-langkah {
+    counter-reset: next-langkah;
+    padding: 0;
+    list-style: none;
+  }
+  .next-langkah > li {
+    position: relative;
+    padding-left: 3rem;
+    counter-increment: next-langkah;
+  }
+  .next-langkah > li + li { margin-top: var(--next-jarak-5); }
+  .next-langkah > li::before {
+    content: counter(next-langkah);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--next-warna-utama);
+    color: var(--next-pada-utama);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 700;
+  }
+
+  .next-dua-kolom {
+    display: grid;
+    gap: var(--next-jarak-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  }
+}
+
+@layer next-token {
+  :root {
+    --next-font-judul: system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    --next-font-isi: var(--next-font-judul);
+    --next-lebar-alat: 760px;
+  }
+}
+
+@layer next-isi {
+  body {
+    background: var(--next-lapis-dasar);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .alat-halaman {
+    max-width: var(--next-lebar-alat);
+    margin: 0 auto;
+    padding: var(--next-jarak-5) var(--next-tepi)
+      calc(var(--next-jarak-7) + env(safe-area-inset-bottom));
+  }
+  .alat-halaman.next-isi {
+    max-width: var(--next-lebar-alat);
+    font-size: var(--next-ukuran-md);
+    line-height: 1.6;
+  }
+  .alat-halaman.next-isi > * + * { margin-top: var(--next-jarak-4); }
+
+  .alat-kembali {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 32px;
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 600;
+  }
+  .next-isi a.alat-kembali {
+    color: var(--next-teks-redup);
+    text-decoration: none;
+  }
+  .alat-kembali::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+  }
+  .alat--aplikasi .alat-kembali { display: none; }
+
+  .alat-halaman.next-isi > h1 {
+    margin-top: var(--next-jarak-2);
+    font-size: var(--next-ukuran-2xl);
+    line-height: 1.25;
+    letter-spacing: -.02em;
+  }
+  .alat-halaman.next-isi > .alat-pembuka {
+    margin-top: var(--next-jarak-2);
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-sm);
+  }
+  .alat-pembuka > * + * { margin-top: .5em; }
+
+  .alat-info {
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius-besar);
+    background: var(--next-lapis-kartu);
+  }
+  .alat-info > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    padding: 0 var(--next-jarak-4);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+  }
+  .alat-info > summary::-webkit-details-marker { display: none; }
+  .alat-info > summary::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--next-teks-redup);
+    border-bottom: 2px solid var(--next-teks-redup);
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform var(--next-durasi);
+  }
+  .alat-info[open] > summary::after { transform: rotate(-135deg); }
+  .alat-info__isi {
+    padding: 0 var(--next-jarak-4) var(--next-jarak-4);
+    font-size: var(--next-ukuran-sm);
+  }
+  .alat-info__isi > * + * { margin-top: 1em; }
+  .next-isi .alat-info__isi h2 {
+    margin-top: 1.4em;
+    font-size: var(--next-ukuran-md);
+  }
+  .next-isi .alat-info__isi h2:first-child { margin-top: 0; }
+
+  .alat-halaman.next-isi > .alat-kaki {
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-xs);
+    line-height: 1.6;
+  }
+
+  .next-isi .alat-grup {
+    margin-top: var(--next-jarak-6);
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .next-isi .alat-daftar {
+    margin-top: var(--next-jarak-2);
+    padding: 0;
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius-besar);
+    background: var(--next-lapis-kartu);
+    list-style: none;
+    overflow: hidden;
+  }
+  .next-isi .alat-daftar li { margin: 0; }
+  .next-isi .alat-daftar li + li { border-top: 1px solid var(--next-garis); }
+  .next-isi .alat-daftar a {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 2px var(--next-jarak-3);
+    min-height: 60px;
+    padding: var(--next-jarak-3) var(--next-jarak-4);
+    color: var(--next-teks);
+    text-decoration: none;
+  }
+  .next-isi .alat-daftar a:active { background: var(--next-permukaan); }
+  .alat-daftar strong { font-weight: 600; line-height: 1.35; }
+  .alat-daftar span {
+    grid-column: 1;
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-sm);
+    line-height: 1.45;
+  }
+  .alat-daftar a::after {
+    content: "";
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--next-teks-redup);
+    border-bottom: 2px solid var(--next-teks-redup);
+    transform: rotate(-45deg);
+  }
+
+  @media (hover: hover) {
+    .next-isi .alat-daftar a:hover { background: var(--next-permukaan); }
+  }
+}
+
+@layer next-isi {
+  .next-cek { display: grid; gap: var(--next-jarak-3); }
+
+  .next-cek__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--next-jarak-3);
+  }
+  .next-js .next-cek__form[hidden] { display: flex; }
+  .next-cek__cari {
+    display: grid;
+    flex: 1 1 260px;
+    gap: 6px;
+  }
+  .next-cek__label {
+    font-size: var(--next-ukuran-sm);
+    font-weight: 600;
+  }
+
+  .next-cek__kolom { position: relative; }
+  .next-cek__kolom svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    color: var(--next-teks-redup);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .next-cek__kolom input {
+    width: 100%;
+    height: 44px;
+    padding: 0 var(--next-jarak-3) 0 38px;
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius);
+    background: var(--next-latar);
+    color: var(--next-teks);
+    font: 400 var(--next-ukuran-md) / 1.2 var(--next-font-isi);
+    outline: none;
+    transition: border-color var(--next-durasi);
+  }
+  .next-cek__kolom input::placeholder { color: var(--next-teks-redup); }
+  .next-cek__kolom input:hover { border-color: var(--next-teks-redup); }
+  .next-cek__kolom input:focus {
+    border-color: var(--next-teks);
+    box-shadow: inset 0 0 0 1px var(--next-teks);
+  }
+
+  .next-cek__saring {
+    display: inline-flex;
+    min-height: 44px;
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius);
+    background: var(--next-latar);
+    overflow: hidden;
+  }
+  .next-cek__saring button {
+    padding: 0 var(--next-jarak-3);
+    border: 0;
+    border-left: 1px solid var(--next-garis);
+    background: transparent;
+    color: var(--next-teks);
+    font-size: var(--next-ukuran-sm);
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background var(--next-durasi);
+  }
+  .next-cek__saring button:first-child { border-left: 0; }
+  .next-cek__saring button:hover { background: var(--next-permukaan); }
+  .next-cek__saring span {
+    color: var(--next-teks-redup);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .next-cek__saring button[aria-pressed="true"] {
+    background: var(--next-teks);
+    color: var(--next-latar);
+  }
+  .next-cek__saring button[aria-pressed="true"] span { color: inherit; }
+
+  .next-cek .next-cek__status {
+    min-height: 1.5em;
+    margin: 0;
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-sm);
+  }
+
+  .next-cek__putusan[hidden], .next-cek__pesan { display: none; }
+
+  .next-cek .next-tabel {
+    border: 1px solid var(--next-garis);
+    border-radius: var(--next-radius-besar);
+  }
+  .next-cek .next-tabel[hidden] { display: none; }
+  .next-cek table { font-size: var(--next-ukuran-sm); line-height: 1.45; }
+  .next-cek th, .next-cek td {
+    padding: 10px var(--next-jarak-3);
+    border: 0;
+    border-bottom: 1px solid var(--next-garis);
+    vertical-align: top;
+  }
+  .next-cek thead th {
+    background: var(--next-permukaan);
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-xs);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .next-cek tbody th { font-weight: 700; }
+  .next-cek tbody tr:last-child > * { border-bottom: 0; }
+  .next-cek tbody tr:hover > * { background: var(--next-permukaan); }
+  .next-cek tr[hidden] { display: none; }
+  .next-cek .next-cek__baris--persis > * {
+    background: var(--next-sukses-lembut);
+  }
+  .next-cek .next-cek__baris--persis > :first-child {
+    box-shadow: inset 3px 0 0 var(--next-sukses);
+  }
+  .next-cek td[data-peran="tag"], .next-cek td[data-label] {
+    white-space: nowrap;
+  }
+  .next-cek tbody th { width: 24%; }
+  .next-cek caption {
+    caption-side: bottom;
+    padding: var(--next-jarak-2) var(--next-jarak-3);
+    border-top: 1px solid var(--next-garis);
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-xs);
+    text-align: left;
+  }
+
+  .next-cek__tag {
+    display: inline-block;
+    padding: 1px var(--next-jarak-2);
+    border-radius: var(--next-radius);
+    background: var(--next-permukaan-2);
+    font-size: var(--next-ukuran-xs);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .next-cek__tag--syariah {
+    background: var(--next-sukses-lembut);
+    color: var(--next-sukses);
+  }
+  .next-cek__kecil {
+    display: block;
+    color: var(--next-teks-redup);
+    font-size: var(--next-ukuran-xs);
+    font-weight: 500;
+  }
+  .next-cek [data-kunci="situs"] { overflow-wrap: anywhere; }
+  .next-cek mark {
+    padding: 0 1px;
+    border-radius: 2px;
+    background: var(--next-peringatan-lembut);
+    box-shadow: inset 0 -2px 0 var(--next-peringatan);
+    color: inherit;
+  }
+
+  .next-js .next-cek:not(.next-cek--siap) tbody tr:nth-child(n+26) {
+    display: none;
+  }
+  .next-cek__lagi { display: none; }
+  .next-js .next-cek:not(.next-cek--siap) .next-cek__lagi,
+  .next-cek--siap .next-cek__lagi:not([hidden]) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 719px) {
+    .next-cek__saring {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .next-cek__saring button { flex: 1 1 auto; padding: 0 10px; }
+    .next-cek .next-tabel {
+      border: 0;
+      border-top: 1px solid var(--next-garis);
+      border-radius: 0;
+    }
+    .next-cek thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .next-cek table { display: flex; flex-direction: column; }
+    .next-cek tbody, .next-cek caption { display: block; }
+    .next-cek caption { order: 1; }
+    .next-cek tbody tr {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2px var(--next-jarak-3);
+      padding: var(--next-jarak-3) 0;
+      border-bottom: 1px solid var(--next-garis);
+    }
+    .next-cek tbody tr > * {
+      grid-column: 1 / -1;
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+    .next-cek tbody tr:hover > * { background: none; }
+    .next-cek tbody th {
+      grid-column: 1;
+      font-size: var(--next-ukuran-md);
+    }
+    .next-cek tbody td[data-peran="tag"] {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: start;
+    }
+    .next-cek tbody th { width: auto; }
+    .next-cek tbody td[data-label] {
+      color: var(--next-teks-redup);
+      font-size: var(--next-ukuran-xs);
+      white-space: normal;
+    }
+    .next-cek tbody td[data-label]::before {
+      content: attr(data-label) " ";
+      color: var(--next-teks);
+      font-weight: 600;
+    }
+    .next-cek tbody td[data-label] .next-cek__kecil {
+      display: inline;
+      margin-left: 4px;
+    }
+    .next-cek .next-cek__baris--persis {
+      padding-inline: var(--next-jarak-3);
+      border-radius: var(--next-radius);
+      background: var(--next-sukses-lembut);
+      box-shadow: inset 3px 0 0 var(--next-sukses);
+    }
+    .next-cek .next-cek__baris--persis > * { background: none; }
+    .next-cek .next-cek__baris--persis > :first-child { box-shadow: none; }
+    .next-cek caption { padding-inline: 0; border-top: 0; }
+  }
+}
+
+</style>
+</head>
+<body>
+<main class="alat-halaman next-isi">
+<a class="alat-kembali" href="index.html">Semua alat</a>
+<h1>Cek Pinjol Legal</h1>
+<div class="alat-pembuka"><p>Ketik nama aplikasi, nama perusahaan, atau alamat situs web pinjaman daring untuk memeriksa apakah penyelenggaranya berizin OJK. Daftar ini memuat 94 penyelenggara pindar dari direktori resmi OJK edisi Juli 2026.</p></div>
+<div class="next-cek" data-next-cek data-next-cek-saring="Jenis" data-next-cek-satuan="penyelenggara">
+  <form class="next-cek__form" role="search" hidden>
+    <div class="next-cek__cari">
+      <label class="next-cek__label" for="next-cek-kata">Nama aplikasi, perusahaan, atau situs web</label>
+      <div class="next-cek__kolom">
+        <input id="next-cek-kata" name="cek" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Ketik untuk mencari">
+      </div>
+    </div>
+    <div class="next-cek__saring" role="group" aria-label="Saring menurut jenis"></div>
+  </form>
+  <p class="next-cek__status" role="status">94 penyelenggara.</p>
+  <div class="next-cek__putusan" hidden></div>
+  <div class="next-tabel">
+    <table>
+      <caption>Sumber: direktori penyelenggara pindar berizin OJK edisi Juli 2026</caption>
+      <thead>
+        <tr><th scope="col">Platform</th><th scope="col">Perusahaan dan situs</th><th scope="col">Jenis</th><th scope="col">Izin OJK</th></tr>
+      </thead>
+      <tbody>
+          <tr><th scope="row"><span data-kunci="nama">AdaKami</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pembiayaan Digital Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.adakami.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-128/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">AdaModal</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Solid Fintek Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.adamodal.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-94/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">AdaPundi</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Info Tekno Siaga</span><span class="next-cek__kecil" data-kunci="situs">www.adapundi.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-48/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Akseleran</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Akseleran Keuangan Inklusif Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.akseleran.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-122/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Aktivaku</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Aktivaku Investama Teknologi</span><span class="next-cek__kecil" data-kunci="situs">aktivaku.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-83/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Alami</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Alami Fintek Sharia</span><span class="next-cek__kecil" data-kunci="situs">alamisharia.co.id</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-21/D.05/2020<span class="next-cek__kecil">27 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Amartha</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Amartha Mikro Fintek</span><span class="next-cek__kecil" data-kunci="situs">amartha.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-46/D.05/2019<span class="next-cek__kecil">13 Mei 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Ammana</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Ammana Fintek Syariah</span><span class="next-cek__kecil" data-kunci="situs">ammana.id</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-123/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Asetku</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pintar Inovasi Digital</span><span class="next-cek__kecil" data-kunci="situs">www.asetku.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-123/D.05/2021<span class="next-cek__kecil">23 Desember 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Avantee</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Grha Dana Bersama</span><span class="next-cek__kecil" data-kunci="situs">www.avantee.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-66/D.05/2021<span class="next-cek__kecil">2 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">AwanTunai</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Simplefi Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">awantunai.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-22/D.05/2020<span class="next-cek__kecil">27 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">BantuFazz</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Dana Kini Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.bantufazz.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-46/D.05/2020<span class="next-cek__kecil">16 Oktober 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">BantuSaku</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Smartec Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">bantusaku.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-91/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">BATUMBU</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Berdayakan Usaha Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.batumbu.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-11/D.05/2021<span class="next-cek__kecil">23 Februari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Boost</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Creative Mobile Adventure</span><span class="next-cek__kecil" data-kunci="situs">www.myboost.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-48/D.05/2019<span class="next-cek__kecil">13 Mei 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Cairin</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Idana Solusi Sejahtera</span><span class="next-cek__kecil" data-kunci="situs">www.cairin.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-29/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Cashcepat</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Artha Permata Makmur</span><span class="next-cek__kecil" data-kunci="situs">cashcepat.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-12/D.05/2021<span class="next-cek__kecil">23 Februari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">cicil</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Cicil Solusi Mitra Teknologi</span><span class="next-cek__kecil" data-kunci="situs">www.cicil.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-20/D.05/2021<span class="next-cek__kecil">14 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Crowdo</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Mediator Komunitas Indonesia</span><span class="next-cek__kecil" data-kunci="situs">crowdo.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-133/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">DANA SYARIAH</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Dana Syariah Indonesia</span><span class="next-cek__kecil" data-kunci="situs">danasyariah.id</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-10/D.05/2021<span class="next-cek__kecil">23 Februari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">DanaBagus</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Dana Bagus Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.danabagus.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-41/D.05/2021<span class="next-cek__kecil">11 Mei 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">danabijak</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Digital Micro Indonesia</span><span class="next-cek__kecil" data-kunci="situs">danabijak.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-92/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danacita</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Inclusive Finance Group</span><span class="next-cek__kecil" data-kunci="situs">www.danacita.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-68/D.05/2021<span class="next-cek__kecil">2 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danai.id</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Adiwisista Finansial Teknologi</span><span class="next-cek__kecil" data-kunci="situs">danai.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-76/D.05/2021<span class="next-cek__kecil">19 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danain</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Mulia Inovasi Digital</span><span class="next-cek__kecil" data-kunci="situs">www.danain.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-84/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">DanaKredi</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pindar Berbagi Bersama</span><span class="next-cek__kecil" data-kunci="situs">www.danakredi.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-18/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danaku</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Trust Teknologi Finansial</span><span class="next-cek__kecil" data-kunci="situs">danaku.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-30/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danamas</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pasar Dana Pinjaman</span><span class="next-cek__kecil" data-kunci="situs">p2p.danamas.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-49/D.05/2017<span class="next-cek__kecil">6 Juli 2017</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Danamerdeka</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Intekno Raya</span><span class="next-cek__kecil" data-kunci="situs">danamerdeka.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-48/D.05/2020<span class="next-cek__kecil">16 Oktober 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Dompet Kilat</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Indo Fin Tek</span><span class="next-cek__kecil" data-kunci="situs">dompetkilat.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-47/D.05/2019<span class="next-cek__kecil">13 Mei 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Duha SYARIAH</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Duha Madani Syariah</span><span class="next-cek__kecil" data-kunci="situs">www.duhasyariah.com</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-32/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">DUMI</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Fidac Inovasi Teknologi</span><span class="next-cek__kecil" data-kunci="situs">minjem.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-78/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Easycash</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Indonesia Fintopia Technology</span><span class="next-cek__kecil" data-kunci="situs">www.easycash.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-49/D.05/2020<span class="next-cek__kecil">16 Oktober 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">EDUFUND</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Fintech Bina Bangsa</span><span class="next-cek__kecil" data-kunci="situs">www.edufund.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-88/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Esta Kapital</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Esta Kapital Fintek</span><span class="next-cek__kecil" data-kunci="situs">www.estakapital.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-129/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">ETHIS</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Ethis Fintek Indonesia</span><span class="next-cek__kecil" data-kunci="situs">ethis.co.id</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-104/D.05/2021<span class="next-cek__kecil">17 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Findaya</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Mapan Global Reksa</span><span class="next-cek__kecil" data-kunci="situs">www.findaya.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-124/D.05/2021<span class="next-cek__kecil">23 Desember 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Finmas</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Oriente Mas Sejahtera</span><span class="next-cek__kecil" data-kunci="situs">www.finmas.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-85/D.05/2019<span class="next-cek__kecil">30 September 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Finplus</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Rezeki Bersama Teknologi</span><span class="next-cek__kecil" data-kunci="situs">finplus.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-3/D.05/2021<span class="next-cek__kecil">6 Januari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">FINTAG</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Fintegra Homido Indonesia</span><span class="next-cek__kecil" data-kunci="situs">fintag.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-131/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">GandengTangan</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kreasi Anak Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.gandengtangan.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-89/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Gradana</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Gradana Teknoruci Indonesia</span><span class="next-cek__kecil" data-kunci="situs">gradana.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-67/D.05/2021<span class="next-cek__kecil">2 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">iGrow</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT LinkAja Modalin Nusantara</span><span class="next-cek__kecil" data-kunci="situs">igrow.asia</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-75/D.05/2021<span class="next-cek__kecil">19 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Indodana</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Artha Dana Teknologi</span><span class="next-cek__kecil" data-kunci="situs">www.indodanafintech.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-15/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Indofund.id</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Bursa Akselerasi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">indofund.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-74/D.05/2021<span class="next-cek__kecil">19 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Indosaku</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Indosaku Digital Teknologi</span><span class="next-cek__kecil" data-kunci="situs">indosaku.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-86/D.05/2021<span class="next-cek__kecil">31 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Invoila</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Sol Mitra Fintec</span><span class="next-cek__kecil" data-kunci="situs">invoila.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-39/D.05/2021<span class="next-cek__kecil">11 Mei 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Ivoji</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Finansia Aira Teknologi</span><span class="next-cek__kecil" data-kunci="situs">www.ivoji.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-73/D.05/2021<span class="next-cek__kecil">19 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">JULO</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT JULO Teknologi Finansial</span><span class="next-cek__kecil" data-kunci="situs">www.julo.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-16/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KawanCicil</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kawan Cicil Teknologi Utama</span><span class="next-cek__kecil" data-kunci="situs">kawancicil.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-101/D.05/2021<span class="next-cek__kecil">17 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KLIK KAMI</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Harapan Fintech Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.klikkami.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-31/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KlikA2C</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Aman Cermat Cepat</span><span class="next-cek__kecil" data-kunci="situs">klika2c.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-87/D.05/2019<span class="next-cek__kecil">30 September 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KlikCair</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Klikcair Magga Jaya</span><span class="next-cek__kecil" data-kunci="situs">klikcair.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-103/D.05/2021<span class="next-cek__kecil">17 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">klikUMKM</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pinjaman Kemakmuran Rakyat</span><span class="next-cek__kecil" data-kunci="situs">www.klikUMKM.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-13/D.05/2021<span class="next-cek__kecil">23 Februari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KoinP2P</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Lunaria Annua Teknologi</span><span class="next-cek__kecil" data-kunci="situs">koinp2p.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-125/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Komunal</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Komunal Finansial Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.komunal.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-51/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KrediFazz</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT KrediFazz Digital Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.kredifazz.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-81/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Kredinesia</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kreditku Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.kredinesia.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-25/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KrediOne</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Inovasi Terdepan Nusantara</span><span class="next-cek__kecil" data-kunci="situs">www.360kredi.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-22/D.05/2021<span class="next-cek__kecil">14 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Kredit Pintar</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kredit Pintar Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.kreditpintar.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-83/D.05/2019<span class="next-cek__kecil">30 September 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KREDITO</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Fintek Digital Indonesia</span><span class="next-cek__kecil" data-kunci="situs">kredito.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-47/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KreditOK</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Doeku Peduli Indonesia</span><span class="next-cek__kecil" data-kunci="situs">kreditok.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-82/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KreditPro</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Tri Digi Fin</span><span class="next-cek__kecil" data-kunci="situs">www.kreditpro.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-130/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">KTA Kilat</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pendanaan Teknologi Nusa</span><span class="next-cek__kecil" data-kunci="situs">www.pendanaan.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-82/D.05/2019<span class="next-cek__kecil">30 September 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">LAHAN SIKAM</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Lampung Berkah Finansial Teknologi</span><span class="next-cek__kecil" data-kunci="situs">www.lahansikam.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-79/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Lentera Dana Nusantara</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Lentera Dana Nusantara</span><span class="next-cek__kecil" data-kunci="situs">www.lenteradana.co.id/lender</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-49/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Mekar</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Mekar Investama Teknologi</span><span class="next-cek__kecil" data-kunci="situs">mekar.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-127/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Modal Nasional</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Solusi Teknologi Finansial</span><span class="next-cek__kecil" data-kunci="situs">www.modalnasional.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-50/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Modalku</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Mitrausaha Indonesia Grup</span><span class="next-cek__kecil" data-kunci="situs">modalku.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-81/D.05/2019<span class="next-cek__kecil">30 September 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">ModalRakyat</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Modal Rakyat Indonesia</span><span class="next-cek__kecil" data-kunci="situs">modalrakyat.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-27/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">OVO Finansial</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Indonusa Bara Sejahtera</span><span class="next-cek__kecil" data-kunci="situs">ovofinansial.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-19/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">PAPITUPI SYARIAH</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Piranti Alphabet Perkasa</span><span class="next-cek__kecil" data-kunci="situs">www.papitupisyariah.com</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-90/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pijar</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT IKI Karunia Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.pijar.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-69/D.05/2021<span class="next-cek__kecil">2 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pinjam Gampang</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kredit Plus Teknologi</span><span class="next-cek__kecil" data-kunci="situs">www.kreditplusteknologi.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-16/D.05/2021<span class="next-cek__kecil">16 Maret 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">PinjamanGo</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Dana Pinjaman Inklusif</span><span class="next-cek__kecil" data-kunci="situs">pinjamango.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-124/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">PinjamDuit</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Stanford Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">pinjamduit.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-5/D.05/2021<span class="next-cek__kecil">6 Januari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pinjamin</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Progo Puncak Group</span><span class="next-cek__kecil" data-kunci="situs">pinjamwinwin.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-17/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">PinjamModal</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Finansial Integrasi Teknologi</span><span class="next-cek__kecil" data-kunci="situs">pinjammodal.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-20/D.05/2020<span class="next-cek__kecil">19 Mei 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pinjamyuk</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kuaikuai Tech Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.pinjamyuk.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-2/D.05/2021<span class="next-cek__kecil">6 Januari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pintek</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pinduit Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">pintek.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-26/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Pohondana</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Pohon Dana Indonesia</span><span class="next-cek__kecil" data-kunci="situs">pohondana.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-126/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">qazwa.id</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Qazwa Mitra Hasanah</span><span class="next-cek__kecil" data-kunci="situs">qazwa.id</span></td><td data-peran="tag"><span class="next-cek__tag next-cek__tag--syariah">Syariah</span></td><td data-label="Izin OJK">KEP-80/D.05/2021<span class="next-cek__kecil">24 Agustus 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Restock.ID</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Cerita Teknologi Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.restock.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-52/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">RpDana</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Lumbung Dana Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.rpdana.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-21/D.05/2021<span class="next-cek__kecil">14 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">RupiahCepat</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Kredit Utama Fintech Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.rupiahcepat.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-132/D.05/2019<span class="next-cek__kecil">13 Desember 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">SamaKita</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Sejahtera Sama Kita</span><span class="next-cek__kecil" data-kunci="situs">samakita.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-95/D.05/2021<span class="next-cek__kecil">8 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">SAMIR</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Sahabat Mikro Fintek</span><span class="next-cek__kecil" data-kunci="situs">www.samir.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-105/D.05/2021<span class="next-cek__kecil">17 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Sanders One Stop Solution</span><span class="next-cek__kecil">Aplikasi tidak tercantum</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Satustop Finansial Solusi</span><span class="next-cek__kecil" data-kunci="situs">sanders.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-40/D.05/2021<span class="next-cek__kecil">11 Mei 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Singa</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Abadi Sejahtera Finansindo</span><span class="next-cek__kecil" data-kunci="situs">singa.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-47/D.05/2020<span class="next-cek__kecil">16 Oktober 2020</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">SOLUSIKU</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Anugerah Digital Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.solusi-ku.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-28/D.05/2021<span class="next-cek__kecil">21 April 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Tokomodal</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Toko Modal Mitra Usaha</span><span class="next-cek__kecil" data-kunci="situs">www.tokomodal.co.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-49/D.05/2019<span class="next-cek__kecil">24 Mei 2019</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">Uangme</span><span class="next-cek__kecil">Aplikasi Android dan iOS</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Uangme Fintek Indonesia</span><span class="next-cek__kecil" data-kunci="situs">www.uangme.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-4/D.05/2021<span class="next-cek__kecil">6 Januari 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">UATAS</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Plus Ultra Abadi</span><span class="next-cek__kecil" data-kunci="situs">www.uatas.id</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-106/D.05/2021<span class="next-cek__kecil">17 September 2021</span></td></tr>
+          <tr><th scope="row"><span data-kunci="nama">UKU</span><span class="next-cek__kecil">Aplikasi Android</span></th><td data-peran="sub"><span data-kunci="perusahaan">PT Teknologi Merlin Sejahtera</span><span class="next-cek__kecil" data-kunci="situs">ukuindo.com</span></td><td data-peran="tag"><span class="next-cek__tag">Konvensional</span></td><td data-label="Izin OJK">KEP-46/D.05/2021<span class="next-cek__kecil">2 Juni 2021</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="next-cek__lagi" hidden>
+    <button class="next-tombol" type="button">Tampilkan semua 94 penyelenggara</button>
+  </div>
+  <div class="next-cek__pesan" hidden>
+    <div data-pesan="ada"><p><strong>{nama} terdaftar dan berizin di OJK.</strong></p><p>Pastikan nama perusahaan ({perusahaan}) dan alamat situsnya sama dengan yang tertera di aplikasi yang Anda pakai. Pinjol ilegal sering meniru nama penyelenggara resmi.</p></div>
+    <div data-pesan="mirip"><p><strong>Tidak ada penyelenggara berizin yang persis bernama &ldquo;{kata}&rdquo;.</strong></p><p>Ada {jumlah} nama mirip di bawah ini. Cocokkan nama perusahaan dan situs webnya. Bila berbeda, jangan lanjutkan sebelum memastikan ke Kontak OJK 157.</p></div>
+    <div data-pesan="kosong"><p><strong>&ldquo;{kata}&rdquo; tidak ada di daftar pindar berizin OJK.</strong></p><ul><li>Jangan mengunduh aplikasinya, mengirim foto KTP, atau memberi kode OTP.</li><li>Paylater dan kredit dari perusahaan pembiayaan atau bank tidak masuk daftar pindar. Tanyakan statusnya ke Kontak OJK 157 atau WhatsApp 081-157-157-157.</li><li>Tawaran pinjol ilegal bisa dilaporkan melalui Kontak OJK 157 atau email konsumen@ojk.go.id.</li></ul></div>
+  </div>
+</div>
+<details class="alat-info">
+<summary>Penjelasan dan sumber</summary>
+<div class="alat-info__isi">
+<h2>Cara membaca hasil</h2>
+
+<div class="next-tabel">
+  <table>
+    <thead><tr><th>Hasil</th><th>Artinya</th></tr></thead>
+    <tbody>
+      <tr><td>Cocok persis (hijau)</td><td>Nama aplikasi, perusahaan, atau situs web yang Anda ketik sama dengan data OJK. Tetap cocokkan ketiganya dengan aplikasi yang Anda buka.</td></tr>
+      <tr><td>Mirip (kuning)</td><td>Ada nama yang mendekati, tetapi tidak sama. Pinjol ilegal sering memakai nama yang mirip dengan penyelenggara berizin.</td></tr>
+      <tr><td>Tidak ditemukan (merah)</td><td>Nama itu tidak ada di daftar pindar berizin edisi Juli 2026. Jangan lanjutkan sebelum memastikan ke OJK.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Tiga hal yang perlu dicocokkan</h2>
+
+<ol class="next-langkah">
+  <li><strong>Nama perusahaan.</strong> Di Play Store atau App Store, buka info pengembang aplikasi dan pastikan nama perusahaannya sama dengan daftar.</li>
+  <li><strong>Alamat situs web.</strong> Perhatikan ejaan domainnya. Huruf tambahan, tanda hubung, atau akhiran yang berbeda bisa menandakan situs tiruan.</li>
+  <li><strong>Cara menawarkan.</strong> Penyelenggara berizin tidak boleh menawarkan pinjaman lewat SMS atau pesan pribadi tanpa persetujuan Anda.</li>
+</ol>
+
+<h2>Yang tidak tercantum di daftar ini</h2>
+
+<p>Daftar ini hanya memuat penyelenggara pindar, yaitu layanan pendanaan bersama berbasis teknologi informasi. Paylater, kredit tunai, dan cicilan dari perusahaan pembiayaan, bank, atau bank digital diawasi OJK dalam daftar yang berbeda. Bila ragu, tanyakan ke Kontak OJK 157.</p>
+
+<h2>Sumber data</h2>
+
+<p>Data diambil dari <a href="https://www.ojk.go.id/id/kanal/iknb/data-dan-statistik/direktori/fintech/Pages/Direktori-Layanan-Pendanaan-Bersama-Berbasis-Teknologi-Informasi-Juli-2026.aspx" rel="noopener" target="_blank">Direktori Layanan Pendanaan Bersama Berbasis Teknologi Informasi Juli 2026</a> yang diterbitkan Otoritas Jasa Keuangan (<a href="https://www.ojk.go.id/id/kanal/iknb/data-dan-statistik/direktori/fintech/Documents/Direktori%20Layanan%20Pendanaan%20Bersama%20Berbasis%20Teknologi%20Informasi%20Juli%202026.pdf" rel="noopener" target="_blank">berkas PDF</a>). Nama platform, perusahaan, situs web, jenis, nomor dan tanggal izin, serta sistem operasi disalin apa adanya, kecuali perbaikan spasi pada satu nama perusahaan. Halaman ini diperbarui setiap OJK menerbitkan direktori baru dan terakhir diperbarui 31 Oktober 2026.</p>
+
+<p>Cermat Kredit tidak berafiliasi dengan OJK atau penyelenggara mana pun. Status izin bisa berubah sewaktu-waktu, misalnya karena izin dicabut atau dikembalikan.</p>
+</div>
+</details>
+<p class="alat-kaki">Hasil cek ini adalah informasi umum dan tidak menggantikan konfirmasi resmi dari OJK. Ini bukan saran keuangan pribadi.</p>
+</main>
+<div class="next-toast" role="status" aria-live="polite"></div>
+<script>
+(function (N) {
+  'use strict';
+
+  var LAMA_TOAST_MS = 2200;
+  var KARAKTER = {
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  };
+  var LINGKARAN = 'M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0z';
+  var IKON = {
+    cari: 'M18 11a7 7 0 1 1-14 0a7 7 0 0 1 14 0zM20.5 20.5l-4.6-4.6',
+    centang: LINGKARAN + 'M8 12.4l2.7 2.7L16.2 9.5',
+    peringatan: 'M10.3 4.2L2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 ' +
+      '1.7-3L13.7 4.2a2 2 0 0 0-3.4 0zM12 9.5v4M12 17h.01',
+    silang: LINGKARAN + 'M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6',
+    info: LINGKARAN + 'M12 11v5.5M12 7.8h.01'
+  };
+
+  N.$ = function (sel, akar) { return (akar || document).querySelector(sel); };
+  N.$$ = function (sel, akar) {
+    return Array.prototype.slice.call((akar || document).querySelectorAll(sel));
+  };
+
+  N.esc = function (teks) {
+    return String(teks == null ? '' : teks).replace(/[&<>"']/g, function (c) {
+      return KARAKTER[c];
+    });
+  };
+
+  N.gerakDikurangi = function () {
+    return window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  };
+
+  N.ikon = function (nama) {
+    if (!IKON[nama]) return '';
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ' +
+      'aria-hidden="true"><path d="' + IKON[nama] + '"/></svg>';
+  };
+
+  N.toast = function (teks) {
+    var el = N.$('.next-toast');
+    if (!el) return;
+    el.textContent = teks;
+    el.classList.add('next-toast--tampil');
+    clearTimeout(N.toast.waktu);
+    N.toast.waktu = setTimeout(function () {
+      el.classList.remove('next-toast--tampil');
+    }, LAMA_TOAST_MS);
+  };
+})(window.Next = window.Next || {});
+
+(function (N) {
+  'use strict';
+
+  var JEDA_KETIK_MS = 120;
+  var MIN_HURUF = 2;
+  var BATAS_AWAL = 25;
+  var SKOR_PERSIS = 90;
+  var PARAM = 'cek';
+  var KELAS_PERSIS = 'next-cek__baris--persis';
+  var BADAN_USAHA = /^\s*(pt|cv|koperasi)\.?\s+|,?\s*tbk\.?\s*$/gi;
+  var PESAN = {
+    ada: '<p><strong>{nama} tercantum di daftar.</strong></p>',
+    mirip: '<p><strong>Tidak ada nama yang persis sama dengan ' +
+      '&ldquo;{kata}&rdquo;.</strong> Periksa {jumlah} hasil yang mirip.</p>',
+    kosong: '<p><strong>&ldquo;{kata}&rdquo; tidak ditemukan di ' +
+      'daftar.</strong></p>'
+  };
+  var IKON = { ada: 'centang', mirip: 'peringatan', kosong: 'silang' };
+
+  function ringkas(teks) {
+    return String(teks || '').toLowerCase().normalize('NFKD')
+      .replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
+  }
+
+  function inang(teks) {
+    return String(teks || '').trim().toLowerCase()
+      .replace(/^[a-z]+:\/\//, '').replace(/^www\./, '')
+      .split(/[/?#\s]/)[0];
+  }
+
+  function jarak(a, b) {
+    var d = [];
+    for (var i = 0; i <= a.length; i++) d[i] = [i];
+    for (var j = 1; j <= b.length; j++) d[0][j] = j;
+    for (i = 1; i <= a.length; i++) {
+      for (j = 1; j <= b.length; j++) {
+        var beda = a[i - 1] === b[j - 1] ? 0 : 1;
+        d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1,
+          d[i - 1][j - 1] + beda);
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] &&
+          a[i - 2] === b[j - 1]) {
+          d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+        }
+      }
+    }
+    return d[a.length][b.length];
+  }
+
+  function batasSalah(panjang) {
+    if (panjang < 4) return 0;
+    return panjang < 8 ? 1 : 2;
+  }
+
+  function skorTeks(kunci, q, bobot) {
+    if (!kunci) return 0;
+    if (kunci === q) return 100 - bobot;
+    if (kunci.indexOf(q) === 0) return 80 - bobot;
+    if (q.length >= 3 && kunci.indexOf(q) > 0) return 60 - bobot;
+    if (kunci.length >= 4 && q.indexOf(kunci) >= 0) return 50 - bobot;
+    var batas = batasSalah(q.length);
+    if (!batas) return 0;
+    var d = Math.min(jarak(q, kunci), jarak(q, kunci.slice(0, q.length)));
+    return d <= batas ? 40 - d * 5 - bobot : 0;
+  }
+
+  function skorSitus(situs, q) {
+    if (!situs || !q) return 0;
+    if (situs === q || situs.endsWith('.' + q) ||
+      q.endsWith('.' + situs)) return 95;
+    return jarak(q, situs) <= 2 ? 45 : 0;
+  }
+
+  function indeks(label, nama) {
+    var cari = String(nama || '').trim().toLowerCase();
+    for (var i = 0; cari && i < label.length; i++) {
+      if (label[i].toLowerCase() === cari) return i;
+    }
+    return -1;
+  }
+
+  function bacaTabel(tabel, kolomSitus) {
+    var label = N.$$('thead th', tabel).map(function (th) {
+      return th.textContent.trim();
+    });
+    var iSitus = indeks(label, kolomSitus);
+    var data = N.$$('tbody tr', tabel).map(function (tr, urut) {
+      var selEl = N.$$('th, td', tr);
+      var sel = selEl.map(function (td) { return td.textContent.trim(); });
+      var el = [['nama', 0], ['perusahaan', 1], ['situs', iSitus]]
+        .map(function (k) {
+          return N.$('[data-kunci="' + k[0] + '"]', tr) || selEl[k[1]];
+        });
+      var teks = el.map(function (e) {
+        return e ? e.textContent.trim() : '';
+      });
+      return {
+        tr: tr,
+        urut: urut,
+        sel: sel,
+        nama: teks[0],
+        usaha: teks[1],
+        sorot: el.filter(function (e) {
+          return e && !e.firstElementChild;
+        }).map(function (e) { return [e, e.textContent.trim()]; }),
+        kunci: [ringkas(teks[0]), ringkas(teks[1].replace(BADAN_USAHA, ''))],
+        situs: inang(teks[2])
+      };
+    });
+    return { label: label, data: data, tbody: N.$('tbody', tabel) };
+  }
+
+  function cari(data, kata, saring, iSaring) {
+    var q = ringkas(kata);
+    var qSitus = /[./]/.test(kata) ? inang(kata) : '';
+    var cukup = q.length >= MIN_HURUF;
+    return data.map(function (rek) {
+      var skor = !cukup ? 0 : Math.max(skorTeks(rek.kunci[0], q, 0),
+        skorTeks(rek.kunci[1], q, 10), skorSitus(rek.situs, qSitus));
+      return { rek: rek, skor: skor };
+    }).filter(function (h) {
+      if (saring && h.rek.sel[iSaring] !== saring) return false;
+      return !cukup || h.skor > 0;
+    }).sort(function (a, b) {
+      return b.skor - a.skor || a.rek.urut - b.rek.urut;
+    });
+  }
+
+  function isiPesan(pola, ganti) {
+    return pola.replace(/\{(kata|nama|perusahaan|jumlah)\}/g,
+      function (_, k) { return N.esc(ganti[k]); });
+  }
+
+  function sorot(teks, kata) {
+    var k = kata.trim();
+    var i = k ? teks.toLowerCase().indexOf(k.toLowerCase()) : -1;
+    if (i < 0) return N.esc(teks);
+    return N.esc(teks.slice(0, i)) + '<mark>' +
+      N.esc(teks.slice(i, i + k.length)) + '</mark>' +
+      N.esc(teks.slice(i + k.length));
+  }
+
+  function buat(tag, kelas, html) {
+    var el = document.createElement(tag);
+    el.className = kelas;
+    if (html) el.innerHTML = html;
+    return el;
+  }
+
+  function siapkan(wadah, tabel) {
+    var form = N.$('.next-cek__form', wadah);
+    if (!form) {
+      form = buat('form', 'next-cek__form',
+        '<div class="next-cek__cari"><label class="next-cek__label" ' +
+        'for="next-cek-kata">Cari</label><div class="next-cek__kolom">' +
+        '<input id="next-cek-kata" type="search" autocomplete="off" ' +
+        'spellcheck="false" enterkeyhint="search"></div></div>' +
+        '<div class="next-cek__saring" role="group"></div>');
+      form.setAttribute('role', 'search');
+      wadah.insertBefore(form, wadah.firstChild);
+    }
+    form.hidden = false;
+    N.$('.next-cek__kolom', form).insertAdjacentHTML('afterbegin',
+      N.ikon('cari'));
+    var bungkus = tabel.closest('.next-tabel') || tabel;
+    var b = { form: form, input: N.$('input', form), bungkus: bungkus,
+      saring: N.$('.next-cek__saring', form) };
+    var acuan = form;
+    [['status', 'p'], ['putusan', 'div']].forEach(function (u) {
+      var el = N.$('.next-cek__' + u[0], wadah);
+      if (!el) {
+        el = buat(u[1], 'next-cek__' + u[0]);
+        acuan.insertAdjacentElement('afterend', el);
+      }
+      b[u[0]] = acuan = el;
+    });
+    b.lagi = N.$('.next-cek__lagi', wadah);
+    if (!b.lagi) {
+      b.lagi = buat('div', 'next-cek__lagi',
+        '<button class="next-tombol" type="button"></button>');
+      bungkus.insertAdjacentElement('afterend', b.lagi);
+    }
+    b.status.setAttribute('role', 'status');
+    return b;
+  }
+
+  function pasangSaring(el, data, iSaring) {
+    if (!el) return;
+    if (iSaring < 0) return el.parentNode.removeChild(el);
+    var hitung = {};
+    data.forEach(function (rek) {
+      var v = rek.sel[iSaring];
+      hitung[v] = (hitung[v] || 0) + 1;
+    });
+    function tombol(nilai, teks, jumlah) {
+      return '<button type="button" aria-pressed="' + !nilai +
+        '" data-nilai="' + N.esc(nilai) + '">' + N.esc(teks) +
+        ' <span>' + jumlah + '</span></button>';
+    }
+    el.innerHTML = tombol('', 'Semua', data.length) +
+      Object.keys(hitung).sort().map(function (v) {
+        return tombol(v, v, hitung[v]);
+      }).join('');
+  }
+
+  function pasang(wadah) {
+    var tabel = N.$('table', wadah);
+    if (!tabel) return;
+    var b = siapkan(wadah, tabel);
+    var isi = bacaTabel(tabel, wadah.getAttribute('data-next-cek-situs'));
+    var iSaring = indeks(isi.label,
+      wadah.getAttribute('data-next-cek-saring'));
+    var satuan = wadah.getAttribute('data-next-cek-satuan') || 'data';
+    var pesan = {};
+    Object.keys(PESAN).forEach(function (k) {
+      var el = N.$('[data-pesan="' + k + '"]', wadah);
+      pesan[k] = el ? el.innerHTML : PESAN[k];
+    });
+    var saring = '';
+    var semua = false;
+    var waktu;
+
+    function simpanUrl(kata) {
+      var url = new URL(location.href);
+      if (kata.trim()) url.searchParams.set(PARAM, kata.trim());
+      else url.searchParams.delete(PARAM);
+      history.replaceState(history.state, '', url);
+    }
+
+    function teksStatus(kata, jumlah, tampak) {
+      var nama = satuan + (saring ? ' ' + saring : '');
+      if (ringkas(kata).length < MIN_HURUF) {
+        return tampak < jumlah
+          ? 'Menampilkan ' + tampak + ' dari ' + jumlah + ' ' + nama + '.'
+          : jumlah + ' ' + nama + '.';
+      }
+      var dalam = saring ? ' dalam ' + saring : '';
+      if (!jumlah) return 'Tidak ada hasil untuk “' + kata.trim() + '”' +
+        dalam + '.';
+      return jumlah + ' hasil untuk “' + kata.trim() + '”' + dalam + '.';
+    }
+
+    function tampilkanPutusan(jenis, kata, hasil, persis) {
+      var utama = (persis[0] || hasil[0] || { rek: {} }).rek;
+      b.putusan.hidden = !jenis;
+      b.putusan.className = 'next-cek__putusan next-putusan' +
+        (jenis ? ' next-putusan--' + jenis : '');
+      b.putusan.innerHTML = !jenis ? '' : N.ikon(IKON[jenis]) +
+        '<div>' + isiPesan(pesan[jenis], { kata: kata.trim(),
+          nama: utama.nama || '', perusahaan: utama.usaha || '',
+          jumlah: hasil.length }) + '</div>';
+    }
+
+    function tampil() {
+      var kata = b.input.value;
+      var cukup = ringkas(kata).length >= MIN_HURUF;
+      var hasil = cari(isi.data, kata, saring, iSaring);
+      var persis = hasil.filter(function (h) {
+        return h.skor >= SKOR_PERSIS;
+      });
+      tampilkanPutusan(!cukup ? '' : persis.length ? 'ada'
+        : hasil.length ? 'mirip' : 'kosong', kata, hasil, persis);
+      var batas = cukup || semua ? hasil.length
+        : Math.min(hasil.length, BATAS_AWAL);
+      var urutan = document.createDocumentFragment();
+      isi.data.forEach(function (rek) { rek.tr.hidden = true; });
+      hasil.slice(0, batas).forEach(function (h) {
+        h.rek.tr.hidden = false;
+        h.rek.tr.classList.toggle(KELAS_PERSIS, cukup &&
+          h.skor >= SKOR_PERSIS);
+        urutan.appendChild(h.rek.tr);
+      });
+      isi.data.forEach(function (rek) {
+        if (rek.tr.hidden) urutan.appendChild(rek.tr);
+        rek.sorot.forEach(function (s) {
+          s[0].innerHTML = sorot(s[1], cukup ? kata : '');
+        });
+      });
+      isi.tbody.appendChild(urutan);
+      b.bungkus.hidden = !batas;
+      b.lagi.hidden = batas >= hasil.length;
+      N.$('button', b.lagi).textContent = 'Tampilkan semua ' +
+        hasil.length + ' ' + satuan;
+      b.status.textContent = teksStatus(kata, hasil.length, batas);
+    }
+
+    function segera() {
+      clearTimeout(waktu);
+      semua = false;
+      tampil();
+      simpanUrl(b.input.value);
+    }
+
+    b.input.addEventListener('input', function () {
+      clearTimeout(waktu);
+      waktu = setTimeout(segera, JEDA_KETIK_MS);
+    });
+    b.input.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || !b.input.value) return;
+      b.input.value = '';
+      segera();
+    });
+    b.form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      segera();
+      b.input.blur();
+    });
+    N.$('button', b.lagi).addEventListener('click', function () {
+      semua = true;
+      tampil();
+    });
+    pasangSaring(b.saring, isi.data, iSaring);
+    if (b.saring && b.saring.parentNode) {
+      b.saring.addEventListener('click', function (e) {
+        var tombol = e.target.closest('button[data-nilai]');
+        if (!tombol) return;
+        saring = tombol.getAttribute('data-nilai');
+        N.$$('button', b.saring).forEach(function (t) {
+          t.setAttribute('aria-pressed', String(t === tombol));
+        });
+        semua = false;
+        tampil();
+      });
+    }
+    b.input.value = new URL(location.href).searchParams.get(PARAM) || '';
+    tampil();
+    wadah.classList.add('next-cek--siap');
+  }
+
+  N.pasangCek = function () {
+    N.$$('[data-next-cek]').forEach(pasang);
+  };
+})(window.Next = window.Next || {});
+
+(function (N) {
+  'use strict';
+
+  function mulai() {
+    if (N.pasangCek) N.pasangCek();
+    if (N.pasangAlat) N.pasangAlat();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mulai);
+  } else {
+    mulai();
+  }
+})(window.Next = window.Next || {});
+
+</script>
+</body>
+</html>
